@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>multiple</title>
+
+<!-- java script 외부파일형태   -->
+<script type="text/javascript" scr="../js/test.js">
+	
+</script>
+<script type="text/javascript">
+	document.write("<h1>구구단</h1>");
+	document.write("<table border='1' width='800' height='400' align='left'>");
+	for (var i = 2; i <= 9; i++) {
+		/*tr 행  td 해당 tr에 속한 셀*/
+		document.write("<tr>");
+		document.write("<td width='100'>"+i+'  단    '+"</td>");
+		for (var j = 1; j <= 9; j++) {
+			document.write("<td width='100'>"+i+'*'+j+'='+i*j+"</td>");
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+</script>
+</head>
+<body>
+</body>
+</html>

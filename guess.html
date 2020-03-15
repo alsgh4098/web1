@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- java script 외부파일형태   -->
+<script type="text/javascript" scr="../js/test.js">
+	
+</script>
+<script type="text/javascript">
+	var number = Math.floor(Math.random() * 10);
+	
+	while(true){
+		// prompt()
+		var input = prompt("1~10사이의 숫자를 맞춰보세요")*1;
+		
+		if(number == input){
+			alert("정답!");
+			break;
+		}else{
+			alert("틀렸습니다! 다시 입력해주세요");
+		}
+		
+	}
+</script>
+</head>
+<body>
+
+</body>
+</html>

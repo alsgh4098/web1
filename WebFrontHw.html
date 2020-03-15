@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>WebFrontHW</title>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans+KR&display=swap" rel="stylesheet">
+	<style>
+		#container{
+			width:960px;
+			padding: 20px;
+			margin: 0 auto;
+			border: 2px solid gray;
+			font-family: 'Nanum Gothic', sans-serif;
+		}
+		
+		header,h1{
+			text-align: center;
+		}
+		
+		header,nav{
+			background-color: #FAF0E6;
+			font-size: xx-large;
+			font-weight: bold;
+			padding:5px;
+			margin-bottom: 10px;
+		}
+		
+		nav ul li{
+			text-align: left;
+			display: inline;
+			font-size: large;
+		}
+		
+		ul{	
+			list-style-type: none;
+		}
+		
+		a{
+			font-size: large;
+			font-weight: none;
+		}
+		
+		body{
+			text-align: left;
+		}
+		
+		table{
+			text-align: center;
+			border : 1px solid #444444;
+			border-collapse: collapse;
+		}
+		
+		.tb_names{
+			background-color: #F0E68C;
+		}
+		
+		table tr:nth-child(2n){
+			background-color: #FFFFF0;
+		}
+		
+		table tr:nth-child(2n+1){
+			background-color: #F0FFF0;
+		}
+		
+		tr,th,td{
+			border : 1px solid #444444;
+		}
+		
+		section{
+			padding: 20px;
+			width:600px;
+			margin-bottom: 20px;
+			border: 1px solid gray;
+			background-color : #FFFAFA;
+			float: left;
+		}
+		
+		aside{
+			height: 535px;
+			width: 220px;
+			padding: 20px;
+			margin-bottom: 20px;
+			border: 1px solid gray;
+			background-color : #F5FFFA;
+			float: right;
+		}
+		
+		p.margin {
+		    margin-top: 6px;
+		    margin-bottom: 6px;
+		}
+		
+		footer{
+			height: 50px;
+			padding: 20px;
+			border: 1px solid gray;
+			clear: both;
+		}
+	</style>
+</head>
+
+<body>
+<div id=container>
+	<Header>
+		ONLINE SSAFY
+		<nav>
+			<ul>
+				<li><a href="">메뉴1</a></li>	<li><a href="">메뉴2</a></li>	
+				<li><a href="">메뉴3</a></li>	<li><a href="">메뉴4</a></li>	
+			</ul>
+		</nav>
+	</Header>
+	
+	<section>
+		<article>
+			<h1>기사 1</h1>
+			<p>모든 국민은 그 보호하는 자녀에게 적어도 초등교육과 법률이 정하는 교육을 받게 할 의무를 진다. 헌법재판소는 법관의 자격을 가진 9인의 재판관으로 구성하며, 재판관은 대통령이 임명한다.</p>
+
+			<p>대통령은 국회에 출석하여 발언하거나 서한으로 의견을 표시할 수 있다. 제3항의 승인을 얻지 못한 때에는 그 처분 또는 명령은 그때부터 효력을 상실한다. 이 경우 그 명령에 의하여 개정 또는 폐지되었던 법률은 그 명령이 승인을 얻지 못한 때부터 당연히 효력을 회복한다.</p>
+		</article>
+	</section>
+	
+	<aside>
+			<h3>SIDE BAR</h3>
+			<p>시맨틱 웹(Semantic Web)은 '의미론적인 웹'이라는 뜻으로,
+			현재의 인터넷과 같은 분산환경에서 리소스에 대한 정보와 자원 사이의관계의미 정보를 기계가 처리할 수 있는 온톨로지 형태로 표현하고, 
+			이를 컴퓨터가 처리하도록 하는 프레임워크이자 기술이다.</p>
+			<p>웹의 창시자인 팀 버너스리가 1998년 제안했고 현재 W3C에 의해 표준화 작업이 진행 중이다.</p>
+	</aside>
+	
+	<section>
+		<article>
+			<h1>기사 2</h1>
+				<table>
+					<tr class = "tb_names">
+						<th>번호</th><th class = "tb_title">제목</th><th>작성자</th>
+					</tr>
+					<tr>
+						<td>1</td><td>행정각부의 설치·조직과 직무범위는 법률로...</td><td>진민호</td>
+					</tr>
+					<tr>
+						<td>2</td><td>법관이 중대한 심신상의 장해로 직무를 수행할 수 없을...</td><td>이효준</td>
+					</tr>
+					<tr>
+						<td>3</td><td>국가는 전통문화의 계승·발전과 민족문화의 창달에 노력하...</td><td>이현구</td>
+					</tr>
+					<tr>
+						<td>4</td><td>국회나 그 위원회의 요구가 있을 때에는 국무총리·국무위원 또는...</td><td>이성열</td>
+					</tr>
+					<tr>
+						<td>5</td><td>국회의원은 국회에서 직무상 행한 발언과 표결에 관하여 국회외에서...</td><td>강동민</td>
+					</tr>
+					<tr>
+						<td>6</td><td>대한민국은 민주공화국이다. 대한민국의 국민이 되는 요건은 법률...</td><td>백광동</td>
+					</tr>
+				</table>
+		</article>
+	</section>
+	
+	<footer>
+		<address>
+			연락처 : <a href="alsgh4098@naver.com">alsgh4098@naver.com</a>
+		</address>
+		<small>Copyright 2020 진민호. All rights reserved.</small>
+	</footer>
+</div>
+
+</body>
+
+</html>

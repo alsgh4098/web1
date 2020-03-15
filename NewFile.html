@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function go(a) {
+		a++;
+		alert("hello" + a);
+		return a;
+	}
+
+	console.log(go(3, 4, 5));
+
+	var score = [ 10, 20, 30 ];
+	function sum(arr) {
+		var total = 0;
+		for (var i = 0; i < arr.length; i++) {
+			total += arr[i];
+		}
+		return total;
+	}
+
+	console.log(sum(score));
+	
+	// 선언적 함수
+	// javascript는 함수도 객체다.
+	// 익명함수.
+	var f1 = function(){
+		alert("hi~~~");
+	}
+	
+	f1();
+	
+	// parameter로도 함수 사용 가능
+	
+	function test(abc){
+		abc();
+	}
+	
+	test(f1);
+	test(go);
+	
+	function test2(num){
+		num++;
+		
+		return function(){
+			alert("hi"+num);
+		}
+	}
+	
+	var result = test2(33);
+	result();
+	
+	test2(55)();
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>
