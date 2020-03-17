@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		
+		body{
+			background-color: #FFF8DC;
+		}
+		
+		div.button input{
+			width: 150px;
+			height: 60px;
+			font-size: 30px;
+			font-weight: bold;
+			position: relative;
+       	 	left: 630px;
+        	top: 30px;
+        	background-color: #FFFFFF;
+		}
+		
+		div.text h1{
+			position: relative;
+			font-size: 45px;
+			font-weight: bold;
+       	 	left: 500px;
+        	top: 80px;
+        	display: inline;
+		}
+		
+		div.image img{
+			width: 450px;
+			height: 300px;
+			position: absolute;
+       	 	left: 500px;
+        	top: 250px;
+		}
+	
+		div.images img{
+			display:inline;
+			width: 300px;
+			height: 210px;
+			position: relative;
+       	 	left: 100px;
+        	top: 480px;
+        	margin-left: 15px;
+        	opacity: 0.5;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="button">
+		<input type="button" name="btn1" value="랜덤 선택" onclick="random()">
+	</div>
+	
+	
+	
+	<div class="text">
+		<h1>오늘의 메뉴 : </h1> <h1 id = "changeText">햄버거</h1>
+	</div>
+	
+	<div class="image">
+		<img id="img" src="burger.jpg" alt="img">
+	</div>
+	
+	<div class="images" >
+		<img src="burger.jpg" alt="img1" onmouseover="ChangeOpacity1(this)" onmouseout="ChangeOpacity2(this)" onclick="Click(this)">
+		<img src="cake.jpg" alt="img2" onmouseover="ChangeOpacity1(this)" onmouseout="ChangeOpacity2(this)" onclick="Click(this)">
+		<img src="sandwich.jpg" alt="img3" onmouseover="ChangeOpacity1(this)" onmouseout="ChangeOpacity2(this)" onclick="Click(this)">
+		<img src="steak.jpg" alt="img4" onmouseover="ChangeOpacity1(this)" onmouseout="ChangeOpacity2(this)" onclick="Click(this)">	
+	</div>
+	
+	<script>
+		function random(){
+			
+			var img = document.getElementById("img").src;
+			
+			var select = document.getElementById("img").src;
+			
+			var text = "";
+			
+			while(img == select){			
+				var number = Math.floor(Math.random() * 5);
+				
+				if(number == 1){
+					select = "burger.jpg";
+					text = "햄버거";
+				}
+				
+				if(number == 2){
+					select = "cake.jpg";
+					text = "케잌";
+				}
+				
+				if(number == 3){
+					select = "sandwich.jpg";
+					text = "샌드위치";
+				}
+				
+				if(number == 4){
+					select = "steak.jpg";
+					text = "스테이크";
+				}
+			}
+			
+			document.getElementById("img").src = select;
+			document.getElementById("changeText").innerHTML = text;
+			
+		}
+		
+		function ChangeOpacity1(obj){
+			obj.style.opacity = "1"; 
+			obj.style.border = "2px solid black";
+			obj.style.borderwidth = "240px";
+		}
+		
+		function ChangeOpacity2(obj){
+			obj.style.opacity = "0.5";
+			obj.style.border = "none";
+		}
+		
+		function Click(obj){
+			
+			console.log(obj);
+			
+			var select = "";
+			var text = "";
+			
+			if(obj.alt == "img1"){
+				select = "burger.jpg";
+				text = "햄버거";
+			}
+			
+			if(obj.alt == "img2"){
+				select = "cake.jpg";
+				text = "케잌";
+			}
+			
+			if(obj.alt == "img3"){
+				select = "sandwich.jpg";
+				text = "샌드위치";
+			}
+			
+			if(obj.alt == "img4"){
+				select = "steak.jpg";
+				text = "스테이크";
+			}
+			document.getElementById("img").src = select;
+			document.getElementById("changeText").innerHTML = text;
+		}
+	</script>
+</body>
+</html>
