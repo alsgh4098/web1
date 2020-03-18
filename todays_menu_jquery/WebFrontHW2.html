@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+		
+		body{
+			background-color: #FFF8DC;
+		}
+		
+		div.button input{
+			width: 150px;
+			height: 60px;
+			font-size: 30px;
+			font-weight: bold;
+			position: relative;
+       	 	left: 630px;
+        	top: 30px;
+        	background-color: #FFFFFF;
+		}
+		
+		div.text h1{
+			position: relative;
+			font-size: 45px;
+			font-weight: bold;
+       	 	left: 500px;
+        	top: 80px;
+        	display: inline;
+		}
+		
+		div.image img{
+			width: 450px;
+			height: 300px;
+			position: absolute;
+       	 	left: 500px;
+        	top: 250px;
+		}
+	
+		div.images img{
+			display:inline;
+			width: 300px;
+			height: 210px;
+			position: relative;
+       	 	left: 100px;
+        	top: 480px;
+        	margin-left: 15px;
+        	opacity: 0.5;
+		}
+	</style>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+	<div class="button">
+		<input type="button" name="btn1" value="랜덤 선택">
+	</div>
+	
+	
+	
+	<div class="text">
+		<h1>오늘의 메뉴 : </h1> <h1 id = "changeText">햄버거</h1>
+	</div>
+	
+	<div class="image">
+		<img id="img" src="burger.jpg" alt="img">
+	</div>
+	
+	<div class="images" >
+		<img src="burger.jpg" alt="img1">
+		<img src="cake.jpg" alt="img2">
+		<img src="sandwich.jpg" alt="img3">
+		<img src="steak.jpg" alt="img4">	
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			
+			$('div.button').click(function(){
+				var img = $('div.image>img').src;
+				
+				var select = $('div.image>img').src;
+				
+				var text = "";
+				
+				while(img == select){			
+					var number = Math.floor(Math.random() * 4);
+					
+					if(number == 1){
+						select = "burger.jpg";
+						text = "햄버거";
+					}
+					
+					if(number == 2){
+						select = "cake.jpg";
+						text = "케잌";
+					}
+					
+					if(number == 3){
+						select = "sandwich.jpg";
+						text = "샌드위치";
+					}
+					
+					if(number == 4){
+						select = "steak.jpg";
+						text = "스테이크";
+					}
+				}
+				
+				$('div.image>img').attr('src',select);
+				$('div.text>#changeText').html(text);
+			});
+			
+			$('div.images>img').mouseover(function(){
+				$(this).css("opacity","1");
+				$(this).css("border","2px solid black");
+				$(this).css("borderwidth","240px");
+			});
+			
+			$('div.images>img').mouseout(function(){
+				$(this).css("opacity","0.5");
+				$(this).css("border","none");
+			});
+			
+			$('div.images>img').click(function(){
+				console.log(this);
+				
+				var select = "";
+				var text = "";
+				
+				if($(this).attr('alt') == "img1"){
+					select = "burger.jpg";
+					text = "햄버거";
+				}
+				
+				if($(this).attr('alt') == "img2"){
+					select = "cake.jpg";
+					text = "케잌";
+				}
+				
+				if($(this).attr('alt') == "img3"){
+					select = "sandwich.jpg";
+					text = "샌드위치";
+				}
+				
+				if($(this).attr('alt') == "img4"){
+					select = "steak.jpg";
+					text = "스테이크";
+				}
+				
+				$('div.image>img').attr('src',select);
+				$('div.text>#changeText').html(text);
+			});
+			
+		});
+	</script>
+</body>
+</html>
